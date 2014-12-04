@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :threads do
+  resources :posts do
     resources :bits, only: [:index, :new, :create]
     resources :comments, only: [:index, :new, :create]
   end
