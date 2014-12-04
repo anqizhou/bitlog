@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :bits, only: [:show, :edit, :update, :destroy]
-  resources :comments, only: [:show, :edit, :update, :destroy]
+  resources :comments, only: [:destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
