@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+$profile-pic-size: 35px;
+$cream: #FCFFF5;
+$grey: #2D2F33;
+
+
+
+.column {
+  float:left;
+}
+
+.profile-picture {
+  background-color: red;
+  border-radius: 100%;
+  height:$profile-pic-size;
+  width:$profile-pic-size;
+}
+
+#sidebar {
+  font-size: 10px;
+  background-color:$grey;
+  height: 568px;
+  padding: 0px;
+}
+
+#sidebar ul {
+  padding: 0px;
+}
+
+#sidebar a {
+  color: $cream;
+  padding: 0px;
+}
+#sidebar li {
+  padding-top: 10px;
+  padding-left: 8px;
+}
+
+#sidebar #add-button {
+  font-size: 20px;
+}
+
+
+

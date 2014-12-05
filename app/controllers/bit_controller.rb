@@ -1,2 +1,0 @@
-class BitController < ApplicationController
-end

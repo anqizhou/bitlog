@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   resources :posts do
-    resources :bits, only: [:index, :new, :create]
+    resources :bits, only: [:index]
     resources :comments, only: [:index, :new, :create]
   end
 
-  resources :bits, only: [:show, :edit, :update, :destroy]
+  resources :bits, only: [:show, :edit, :update, :destroy, :new, :create]
   resources :comments, only: [:destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
