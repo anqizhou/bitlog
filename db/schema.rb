@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20141205073758) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status"
   end
 
 end

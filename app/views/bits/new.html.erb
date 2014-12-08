@@ -2,5 +2,13 @@
 
 <%= form_for @bit do |f| %>
   <%= f.text_field :content %>
+
+
+
+<!-- collection_select, @posts -->
+
   <%= f.submit %>
 <% end %>
+<%= collection_select(:bit, :post_id, @posts, :id, :title) %>
+
+
