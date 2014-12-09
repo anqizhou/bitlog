@@ -9,6 +9,8 @@
 
   <%= f.submit %>
 <% end %>
-<%= collection_select(:bit, :post_id, @posts, :id, :title) %>
+
+<%= collection_select(:bit, :post_id, Post.all, :id, :title) %>
+
 
 
