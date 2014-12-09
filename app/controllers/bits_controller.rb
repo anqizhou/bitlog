@@ -10,7 +10,13 @@ class BitsController < ApplicationController
 
   def create
     @bit = Bit.new(bit_params)
-    @bit.post_id = params[:bit][:post_id]
+    if params[:bit][:post_id] != ""
+      @bit.post_id = params[:bit][:post_id]
+    else
+      # Creating new post here. Remember to ask Harry if I should really tie the create post to the post controller.
+      @newpost = Post.create(title:params[:post][:title], status:"unpublished")
+      @bit.post_id = @newpost.id
+    end
     @bit.save
   end
 

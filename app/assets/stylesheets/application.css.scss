@@ -14,9 +14,22 @@
  *= require_self
  */
 
+// Generic:
 $profile-pic-size: 35px;
 $cream: #FCFFF5;
 $grey: #2D2F33;
+$white-grey: #C8C8C8;
+
+.hidden {
+  display:none;
+}
+
+// Specific Styling
+
+.top-bar {
+  background-color: black;
+  height: 15px;
+}
 
 
 
@@ -56,9 +69,47 @@ $grey: #2D2F33;
 }
 
 
+// Main board area
 
-#bit_post_id {
-  width: 200px;
+#main {
+  padding: 0;
 }
+
+.top-bar-save {
+  background-color: $grey;
+}
+
+.top-bar-save input {
+  background-color: $grey;
+  color: white;
+  border: none;
+  margin-left: 220px;
+}
+
+.top-bar-save textarea {
+  border-color: $white-grey;
+}
+
+
+
+
+
+
+#bit_post_id select {
+  width: 270px;
+  border-color: $white-grey;
+  background-color: white;
+  border-radius: 0;
+}
+
+
+#title_input input {
+  width: 270px;
+  background-color: white;
+  border: 1px solid $white-grey;
+  margin-top: 5px;
+}
+
+
 
 

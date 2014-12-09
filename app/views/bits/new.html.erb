@@ -1,8 +1,9 @@
 <div></div>
 <%= form_for @bit, url: {action: "create"} do |f| %>
-  <%= f.text_area :content, size: "30 x8" %>
-  <%= collection_select(:bit, :post_id, Post.all, :id, :title) %>
-  <%= f.submit "Save" %>
+  <div class="top-bar-save"><%= f.submit "Save" %></div>
+  <%= f.text_area :content, size: "41x8", placeholder: "Write bits..." %>
+  <%= collection_select(:bit, :post_id, Post.all, :id, :title, {include_blank: 'New Post...'}) %>
+  <div id="title_input"><%= text_field(:post, :title) %></div>
 <% end %>
 
 
