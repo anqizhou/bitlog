@@ -10,6 +10,7 @@ class BitsController < ApplicationController
 
   def create
     @bit = Bit.new(bit_params)
+    @bit.post_id = params[:bit][:post_id]
     @bit.save
   end
 

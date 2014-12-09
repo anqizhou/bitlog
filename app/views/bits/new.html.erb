@@ -1,16 +1,10 @@
-<h1>create new bit page</h1>
-
-<%= form_for @bit do |f| %>
-  <%= f.text_field :content %>
-
-
-
-<!-- collection_select, @posts -->
-
-  <%= f.submit %>
+<div></div>
+<%= form_for @bit, url: {action: "create"} do |f| %>
+  <%= f.text_area :content, size: "30 x8" %>
+  <%= collection_select(:bit, :post_id, Post.all, :id, :title) %>
+  <%= f.submit "Save" %>
 <% end %>
 
-<%= collection_select(:bit, :post_id, Post.all, :id, :title) %>
 
 
 
