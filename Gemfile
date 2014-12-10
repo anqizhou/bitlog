@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.
 gem "select2-rails"
 
+# Use carrierwave for image uploading
+gem 'carrierwave'
+
+
 group :development do
   # Spring speeds up development by keeping your application running in the background.
   #> https://github.com/rails/spring

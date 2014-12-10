@@ -10,21 +10,27 @@ class BitsController < ApplicationController
 
   def create
     @bit = Bit.new(bit_params)
-    if params[:bit][:post_id] != ""
-      @bit.post_id = params[:bit][:post_id]
+    if bit_params[:post_id] != ""
+      @bit.post_id = bit_params[:post_id]
     else
       # Creating new post here. Remember to ask Harry if I should really tie the create post to the post controller.
       @newpost = Post.create(title:params[:post][:title], status:"unpublished")
       @bit.post_id = @newpost.id
     end
+    i = Image.new
+    i.file = params[:image][:file]
+    i.save!
+    # Need to pass in the params of the bit (bit_id)
     @bit.save
+
+
   end
 
 
 
   private
     def bit_params
-      params.require(:bit).permit(:content)
+      params.require(:bit).permit(:content, :post_id)
     end
 
 end
