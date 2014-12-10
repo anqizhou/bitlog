@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210075538) do
+ActiveRecord::Schema.define(version: 20141210093443) do
 
   create_table "bits", force: true do |t|
     t.string   "content"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20141210075538) do
     t.string   "file"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "bit_id"
   end
 
   create_table "posts", force: true do |t|

@@ -19,11 +19,10 @@ class BitsController < ApplicationController
     end
     i = Image.new
     i.file = params[:image][:file]
-    i.save!
-    # Need to pass in the params of the bit (bit_id)
     @bit.save
-
-
+    i.bit_id = @bit.id
+    i.save!
+    binding.pry
   end
 
 
