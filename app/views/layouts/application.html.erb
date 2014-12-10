@@ -2,13 +2,36 @@
 <html>
 <head>
   <title>Bitlog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag     '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag     '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css' %>
+  <%= stylesheet_link_tag     '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="top-bar"></div>
+  <div class="containter">
+   <!-- sidebar -->
+    <div class="column col-xs-2" id="sidebar">
 
-<%= yield %>
+      <ul id="lg-menu">
+        <li><a href="#"><div class="profile-picture"></div></a></li>
+        <li class="active" id="add-button"><a href="#">+</a></li>
+        <li><a href="#">View<br>Bitlogs</a></li>
+        <li><a href="#">View<br>Drafts</a></li>
+        <li><a href="#">Bitlog<br>Feeds</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    <!-- /sidebar -->
+    </div>
+    <div class="column col-xs-10" id="main">
+      <%= yield %>
+    </div>
+  </div>
 
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' %>
 </body>
 </html>

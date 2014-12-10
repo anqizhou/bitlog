@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// Generic:
+$profile-pic-size: 35px;
+$cream: #FCFFF5;
+$grey: #2D2F33;
+$white-grey: #C8C8C8;
+
+.hidden {
+  display:none;
+}
+
+// Specific Styling
+
+.top-bar {
+  background-color: black;
+  height: 15px;
+}
+
+
+
+.column {
+  float:left;
+}
+
+.profile-picture {
+  background-color: red;
+  border-radius: 100%;
+  height:$profile-pic-size;
+  width:$profile-pic-size;
+}
+
+#sidebar {
+  font-size: 10px;
+  background-color:$grey;
+  height: 568px;
+  padding: 0px;
+}
+
+#sidebar ul {
+  padding: 0px;
+}
+
+#sidebar a {
+  color: $cream;
+  padding: 0px;
+}
+#sidebar li {
+  padding-top: 10px;
+  padding-left: 8px;
+}
+
+#sidebar #add-button {
+  font-size: 20px;
+}
+
+
+// Main board area
+
+#main {
+  padding: 0;
+}
+
+.top-bar-save {
+  background-color: $grey;
+}
+
+.top-bar-save input {
+  background-color: $grey;
+  color: white;
+  border: none;
+  margin-left: 220px;
+}
+
+.top-bar-save textarea {
+  border-color: $white-grey;
+}
+
+
+.bit-input-board {
+  position: relative;
+}
+
+
+.glyphicon {
+  font-size: x-large;
+  color: $white-grey;
+  position: absolute;
+  top: 140px;
+}
+
+
+#bit_post_id select {
+  width: 270px;
+  border-color: $white-grey;
+  background-color: white;
+  border-radius: 0;
+}
+
+
+#title_input input {
+  width: 270px;
+  background-color: white;
+  border: 1px solid $white-grey;
+  margin-top: 5px;
+}
+
+
+
