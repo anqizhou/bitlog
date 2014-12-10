@@ -13,5 +13,4 @@ $ ->
       $("#title_input").removeClass("hidden")
 
   $('#clear_input').click ->
-    console.log "clicked"
     $( "textarea" ).val("")
