@@ -4,6 +4,14 @@
 
 
 $ ->
-  if $( "#bit_post_id" ).val() != ""
-    $("#title_input").addClass("hidden")
-# This does not work somehow
+
+  $('#bit_post_id').change ->
+    postTitle = $( "#bit_post_id" ).val()
+    if postTitle != ""
+      $("#title_input").addClass("hidden")
+    else
+      $("#title_input").removeClass("hidden")
+
+  $('#clear_input').click ->
+    console.log "clicked"
+    $( "textarea" ).val("")

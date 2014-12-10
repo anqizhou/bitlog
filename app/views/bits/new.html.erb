@@ -1,7 +1,10 @@
 <div></div>
 <%= form_for @bit, url: {action: "create"} do |f| %>
   <div class="top-bar-save"><%= f.submit "Save" %></div>
-  <%= f.text_area :content, size: "41x8", placeholder: "Write bits..." %>
+  <div class="bit-input-board">
+    <%= f.text_area :content, size: "41x8", placeholder: "Write bits..." %>
+    <div id="clear_input"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></div>
+  </div>
   <%= collection_select(:bit, :post_id, Post.all, :id, :title, {include_blank: 'New Post...'}) %>
   <div id="title_input"><%= text_field(:post, :title) %></div>
 <% end %>
