@@ -2,7 +2,7 @@
   <% @publishedPosts.each do |post| %>
     <div class="post-title post-title-published"><%= post.title %></div>
     <% post.bits.each do |bit| %>
-      <div class="bit-content"><%= bit.content %></div>
+      <div class="bit-content"><%= bit.content %><i class="fa fa-trash fa-lg"><i class="fa fa-pencil-square-o"></i></i></div>
       <% bit.images.each do |image| %>
         <div class="bit-images"><%= image_tag(image.file, size: "70") %></div>
       <% end %>
