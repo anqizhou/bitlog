@@ -22,7 +22,7 @@ class BitsController < ApplicationController
     @bit.save
     i.bit_id = @bit.id
     i.save!
-    binding.pry
+    redirect_to url_for(:controller => :posts, :action => :index)
   end
 
 

@@ -1,5 +1,5 @@
 <div class="my-published-posts">
-  <% @publisedPosts.each do |post| %>
+  <% @publishedPosts.each do |post| %>
     <div class="post-title post-title-published"><%= post.title %></div>
     <% post.bits.each do |bit| %>
       <div class="bit-content"><%= bit.content %></div>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="my-unpublished-posts">
-  <% @unpublisedPosts.each do |post| %>
+  <% @unpublishedPosts.each do |post| %>
     <div class="post-title post-title-unpublished"><%= post.title %></div>
     <% post.bits.each do |bit| %>
       <div class="bit-content"><%= bit.content %></div>
