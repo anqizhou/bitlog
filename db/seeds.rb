@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Post.create([{ title: 'Healthy eating for 2 weeks' }, { title: 'Trip to Paris' }, { title: 'My best pecan sweet potato bake' }])
+Post.create([{ title: 'Healthy eating for 2 weeks', status: "published" }, { title: 'Trip to Paris', status: "unpublished" }, { title: 'My best pecan sweet potato bake', status: "unpublished" }])
 
-Bit.create(content: 'Eating avocado smoothie on day 1', post_id: 1)
+Bit.create(content: 'Eating avocado smoothie on day 1', post_id: 4)
