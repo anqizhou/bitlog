@@ -1,27 +1,48 @@
-<div class="my-published-posts">
+<div class="my-published-posts accordion" id="accordion2">
   <% @publishedPosts.each do |post| %>
-    <div class="post-title post-title-published"><%= post.title %></div>
-    <% post.bits.each do |bit| %>
-      <div class="bit-content" data-id="<%= bit.id %>">
-        <%= bit.content %>
-        <i class="fa fa-trash fa-lg destroy-bit-btn"></i>
-        <%= link_to raw("<i class='fa fa-pencil-square-o'></i>"), edit_bit_path(bit) %>
-        <% bit.images.each do |image| %>
-          <div class="bit-images"><%= image_tag(image.file, size: "70") %></div>
-        <% end %>
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <div class="post-title post-title-published"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a></div>
       </div>
-    <% end %>
+      <div id="collapse<%= post.id %>" class="accordion-body collapse in">
+        <div class="accordion-inner">
+          <% post.bits.each do |bit| %>
+            <div class="bit-content" data-id="<%= bit.id %>">
+              <%= bit.content %>
+              <i class="fa fa-trash fa-lg destroy-bit-btn"></i>
+              <%= link_to raw("<i class='fa fa-pencil-square-o'></i>"), edit_bit_path(bit) %>
+              <% bit.images.each do |image| %>
+                <div class="bit-images"><%= image_tag(image.file, size: "70") %></div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<div class="my-unpublished-posts">
+<div class="my-unpublished-posts accordion" id="accordion2">
   <% @unpublishedPosts.each do |post| %>
-    <div class="post-title post-title-unpublished"><%= post.title %></div>
-    <% post.bits.each do |bit| %>
-      <div class="bit-content"><%= bit.content %></div>
-      <% bit.images.each do |image| %>
-        <div class="bit-images"><%= image_tag(image.file, size: "70") %></div>
-      <% end %>
-    <% end %>
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <div class="post-title post-title-unpublished"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a></div>
+      </div>
+      <div id="collapse<%= post.id %>" class="accordion-body collapse in">
+        <div class="accordion-inner">
+          <% post.bits.each do |bit| %>
+            <div class="bit-content" data-id="<%= bit.id %>">
+              <%= bit.content %>
+              <i class="fa fa-trash fa-lg destroy-bit-btn"></i>
+              <%= link_to raw("<i class='fa fa-pencil-square-o'></i>"), edit_bit_path(bit) %>
+              <% bit.images.each do |image| %>
+                <div class="bit-images"><%= image_tag(image.file, size: "70") %></div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
+
