@@ -17,14 +17,23 @@ class BitsController < ApplicationController
       @newpost = Post.create(title:params[:post][:title], status:"unpublished")
       @bit.post_id = @newpost.id
     end
+    @bit.save
+# fix an if condition
     i = Image.new
     i.file = params[:image][:file]
-    @bit.save
     i.bit_id = @bit.id
     i.save!
+
     redirect_to url_for(:controller => :posts, :action => :index)
   end
 
+  def destroy
+    @bit = Bit.where(id:params[:id])
+    @bit.first.destroy
+    # redirect_to url_for(:controller => :posts, :action => :index)
+    # render json / text / status code
+    head :no_content
+  end
 
 
   private

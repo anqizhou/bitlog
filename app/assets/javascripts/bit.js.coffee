@@ -4,7 +4,6 @@
 
 
 $ ->
-
   $('#bit_post_id').change ->
     postTitle = $( "#bit_post_id" ).val()
     if postTitle != ""
