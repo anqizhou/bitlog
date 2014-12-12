@@ -5,7 +5,7 @@
       <div class="bit-content" data-id="<%= bit.id %>">
         <%= bit.content %>
         <i class="fa fa-trash fa-lg destroy-bit-btn"></i>
-        <i class="fa fa-pencil-square-o"></i>
+        <%= link_to raw("<i class='fa fa-pencil-square-o'></i>"), edit_bit_path(bit) %>
         <% bit.images.each do |image| %>
           <div class="bit-images"><%= image_tag(image.file, size: "70") %></div>
         <% end %>

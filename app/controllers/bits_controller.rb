@@ -27,14 +27,24 @@ class BitsController < ApplicationController
       i.save!
     end
 
-    redirect_to url_for(:controller => :posts, :action => :index)
+    redirect_to posts_url
   end
 
+  def edit
+    @bit = Bit.find(params[:id])
+  end
+
+  def update
+    @bit = Bit.find(params[:id])
+    @bit.update(bit_params)
+    binding.pry
+    redirect_to posts_url
+  end
+
+
   def destroy
-    @bit = Bit.where(id:params[:id])
-    @bit.first.destroy
-    # redirect_to url_for(:controller => :posts, :action => :index)
-    # render json / text / status code
+    @bit = Bit.find(params[:id])
+    @bit.destroy
     head :no_content
   end
 
@@ -43,5 +53,4 @@ class BitsController < ApplicationController
     def bit_params
       params.require(:bit).permit(:content, :post_id)
     end
-
 end
