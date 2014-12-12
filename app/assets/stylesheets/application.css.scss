@@ -18,7 +18,11 @@
 $profile-pic-size: 35px;
 $cream: #FCFFF5;
 $grey: #2D2F33;
+$medium-grey: #626262;
 $white-grey: #C8C8C8;
+
+$title-size: 16px;
+$content-size: 12px;
 
 .hidden {
   display:none;
@@ -32,9 +36,14 @@ $white-grey: #C8C8C8;
 }
 
 
-
 .column {
   float:left;
+}
+
+
+.col-xs-10 {
+ height: 568px;
+ overflow: auto;
 }
 
 .profile-picture {
@@ -119,5 +128,43 @@ $white-grey: #C8C8C8;
   margin-top: 5px;
 }
 
+// Generic post formatting
+// title:
+.accordion-heading {
+  border-bottom: 1px solid $white-grey
+}
+.post-title {
+  font-size: $title-size;
+  margin-left: 20px;
+  margin-top: 6px;
+  margin-bottom: 1px;
+}
+
+// text body
+.bit-content {
+  padding-left:20px;
+  padding-bottom: 5px;
+  font-size: $content-size;
+  color: $grey;
+  margin-top: 5px;
+}
+
+.bit-images img {
+  border: 0.5px solid $white-grey;
+  border-radius: 5%;
+  display: block;
+}
+
+// Conditional Formating
+
+
+.post-title-published a {
+  color: $grey;
+}
+
+
+.post-title-unpublished a {
+  color: $medium-grey;
+}
 
 

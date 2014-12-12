@@ -28,7 +28,7 @@
       <div class="accordion-heading">
         <div class="post-title post-title-unpublished"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a></div>
       </div>
-      <div id="collapse<%= post.id %>" class="accordion-body collapse in">
+      <div id="collapse<%= post.id %>" class="accordion-body collapse">
         <div class="accordion-inner">
           <% post.bits.each do |bit| %>
             <div class="bit-content" data-id="<%= bit.id %>">
