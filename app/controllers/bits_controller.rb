@@ -19,10 +19,13 @@ class BitsController < ApplicationController
     end
     @bit.save
 # fix an if condition
-    i = Image.new
-    i.file = params[:image][:file]
-    i.bit_id = @bit.id
-    i.save!
+
+    if params[:image] != nil
+      i = Image.new
+      i.file = params[:image][:file]
+      i.bit_id = @bit.id
+      i.save!
+    end
 
     redirect_to url_for(:controller => :posts, :action => :index)
   end
