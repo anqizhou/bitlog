@@ -2,12 +2,12 @@
   <% @publishedPosts.each do |post| %>
     <div class="accordion-group">
       <div class="accordion-heading">
-        <div class="post-title post-title-published"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a></div>
+        <div class="post-title post-title-published" data-post-id="<%= post.id %>"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a> <i class="fa fa-trash fa-lg destroy-post-btn"></i> <i class="fa fa-newspaper-o"></i></div>
       </div>
       <div id="collapse<%= post.id %>" class="accordion-body collapse in">
         <div class="accordion-inner">
           <% post.bits.each do |bit| %>
-            <div class="bit-content" data-id="<%= bit.id %>">
+            <div class="bit-content" data-bit-id="<%= bit.id %>">
               <%= bit.content %>
               <i class="fa fa-trash fa-lg destroy-bit-btn"></i>
               <%= link_to raw("<i class='fa fa-pencil-square-o'></i>"), edit_bit_path(bit) %>
@@ -26,12 +26,12 @@
   <% @unpublishedPosts.each do |post| %>
     <div class="accordion-group">
       <div class="accordion-heading">
-        <div class="post-title post-title-unpublished"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a></div>
+        <div class="post-title post-title-published" data-post-id="<%= post.id %>"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a> <i class="fa fa-trash fa-lg destroy-post-btn"></i> <i class="fa fa-newspaper-o"></i></div>
       </div>
       <div id="collapse<%= post.id %>" class="accordion-body collapse">
         <div class="accordion-inner">
           <% post.bits.each do |bit| %>
-            <div class="bit-content" data-id="<%= bit.id %>">
+            <div class="bit-content" data-bit-id="<%= bit.id %>">
               <%= bit.content %>
               <i class="fa fa-trash fa-lg destroy-bit-btn"></i>
               <%= link_to raw("<i class='fa fa-pencil-square-o'></i>"), edit_bit_path(bit) %>
