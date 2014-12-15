@@ -157,6 +157,14 @@ $content-size: 12px;
 
 // Conditional Formating
 
+.post-title-published {
+  background-color: #D1EBFF;
+}
+
+.post-title-unpublished {
+  background-color: #96CCF5;
+}
+
 
 .post-title-published a {
   color: $grey;
@@ -164,7 +172,7 @@ $content-size: 12px;
 
 
 .post-title-unpublished a {
-  color: $medium-grey;
+  color: $grey
 }
 
 

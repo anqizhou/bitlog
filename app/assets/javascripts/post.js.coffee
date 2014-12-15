@@ -18,3 +18,12 @@ $(".destroy-post-btn").click (event) ->
   .done (data, statusText) ->
     $( "div[data-post-id = '#{postId}']" ).remove()
 
+
+$(".fa-newspaper-o").click (event) ->
+  postId = $(this).parent().attr('data-post-id')
+  $.ajax
+    url: "/posts/#{postId}.json"
+    type: 'PATCH'
+  .done (data, statusText) ->
+    console.log "returned data", data
+    location.reload()

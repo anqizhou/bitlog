@@ -1,8 +1,8 @@
 <div class="my-published-posts accordion" id="accordion2">
   <% @publishedPosts.each do |post| %>
     <div class="accordion-group">
-      <div class="accordion-heading">
-        <div class="post-title post-title-published" data-post-id="<%= post.id %>"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a> <i class="fa fa-trash fa-lg destroy-post-btn"></i> <i class="fa fa-newspaper-o"></i></div>
+      <div class="accordion-heading post-title-published">
+        <div class="post-title" data-post-id="<%= post.id %>"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a> <i class="fa fa-trash fa-lg destroy-post-btn"></i> <i class="fa fa-newspaper-o"></i></div>
       </div>
       <div id="collapse<%= post.id %>" class="accordion-body collapse in">
         <div class="accordion-inner">
@@ -25,8 +25,8 @@
 <div class="my-unpublished-posts accordion" id="accordion2">
   <% @unpublishedPosts.each do |post| %>
     <div class="accordion-group">
-      <div class="accordion-heading">
-        <div class="post-title post-title-published" data-post-id="<%= post.id %>"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a> <i class="fa fa-trash fa-lg destroy-post-btn"></i> <i class="fa fa-newspaper-o"></i></div>
+      <div class="accordion-heading post-title-unpublished">
+        <div class="post-title" data-post-id="<%= post.id %>"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a> <i class="fa fa-trash fa-lg destroy-post-btn"></i> <i class="fa fa-newspaper-o"></i></div>
       </div>
       <div id="collapse<%= post.id %>" class="accordion-body collapse">
         <div class="accordion-inner">

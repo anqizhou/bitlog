@@ -5,19 +5,23 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    binding.pry
-    #loop around to destroy all the bits related to the post
 
     @bitsForThePost = Bit.where(post_id:params[:id])
     @bitsForThePost.each do |b|
       b.destroy
     end
-    binding.pry
-
-
     @post = Post.find(params[:id])
     @post.destroy
     head :no_content
+  end
 
+  def publish
+    @post = Post.find(params[:id])
+    if @post.status == "published"
+      @post.update(status: "unpublished")
+    else
+      @post.update(status: "published")
+    end
+    head :no_content
   end
 end

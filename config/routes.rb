@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  patch 'posts/:id' => 'posts#publish'
+
   resources :posts do
     resources :bits, only: [:index]
     resources :comments, only: [:index, :new, :create]
