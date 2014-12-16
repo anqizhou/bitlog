@@ -1,7 +1,7 @@
 class BitsController < ApplicationController
   def new
     @bit = Bit.new
-    @posts = Post.all
+    @posts = Post.where(user: current_user).all
 
     # Send @posts into a dropdown list. Take the result post's id as the id of the newly created bit's post_id
     # # view:<%= select(:person, :city_id, [['Lisbon', 1], ['Madrid', 2], ...]) %>
@@ -14,11 +14,10 @@ class BitsController < ApplicationController
       @bit.post_id = bit_params[:post_id]
     else
       # Creating new post here. Remember to ask Harry if I should really tie the create post to the post controller.
-      @newpost = Post.create(title:params[:post][:title], status:"unpublished")
+      @newpost = Post.create(title:params[:post][:title], status:"unpublished", user:current_user)
       @bit.post_id = @newpost.id
     end
     @bit.save
-# fix an if condition
 
     if params[:image] != nil
       i = Image.new

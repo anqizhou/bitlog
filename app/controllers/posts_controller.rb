@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @publishedPosts = Post.where(status:"published")
-    @unpublishedPosts = Post.where(status:"unpublished")
+    @publishedPosts = Post.where(user: current_user).where(status:"published")
+    @unpublishedPosts = Post.where(user: current_user).where(status:"unpublished")
   end
 
   def destroy
-
     @bitsForThePost = Bit.where(post_id:params[:id])
     @bitsForThePost.each do |b|
       b.destroy
