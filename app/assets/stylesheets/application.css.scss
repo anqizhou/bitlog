@@ -84,18 +84,20 @@ $content-size: 12px;
   padding: 0;
 }
 
-.top-bar-save {
+.top-bar-inner {
   background-color: $grey;
+  color: white;
+  text-align: right;
 }
 
-.top-bar-save input {
+
+.top-bar-inner input {
   background-color: $grey;
   color: white;
   border: none;
-  margin-left: 220px;
 }
 
-.top-bar-save textarea {
+.top-bar-inner textarea {
   border-color: $white-grey;
 }
 

@@ -1,6 +1,6 @@
 <div></div>
 <%= form_for @bit, url: {action: "create"}, :html => {:multipart => true} do |f| %>
-  <div class="top-bar-save"><%= f.submit "Save" %></div>
+  <div class="top-bar-save top-bar-inner"><%= f.submit "Save" %></div>
   <div class="bit-input-board">
     <%= f.text_area :content, size: "41x8", placeholder: "Write bits..." %>
     <div id="clear_input"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></div>
