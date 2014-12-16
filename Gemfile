@@ -28,7 +28,8 @@ gem "select2-rails"
 
 # Use carrierwave for image uploading
 gem 'carrierwave'
-
+# Use devise for login
+gem 'devise'
 
 group :development do
   # Spring speeds up development by keeping your application running in the background.
