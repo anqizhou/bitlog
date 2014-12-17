@@ -24,6 +24,11 @@ $white-grey: #C8C8C8;
 $title-size: 16px;
 $content-size: 12px;
 
+body {
+  font-family: 'Oxygen', sans-serif;
+}
+
+
 .hidden {
   display:none;
 }
@@ -76,6 +81,33 @@ $content-size: 12px;
 
 #sidebar #add-button {
   font-size: 20px;
+}
+
+
+// Profile header area
+.profile-header {
+  height: 120px;
+  background: linear-gradient($grey, $medium-grey);
+  padding: 10px;
+}
+
+.profile-image {
+  float: left;
+  margin-left: 10px;
+}
+
+.profile-name {
+  float: left;
+  margin: 60px 0 10px 10px;
+  color: $cream;
+}
+
+.friendship-status {
+  padding: 5px 0 5px 20px;
+  background-color: #013861;
+  color: $cream;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bolder;
 }
 
 
@@ -153,8 +185,8 @@ $content-size: 12px;
 .post-title {
   font-size: $title-size;
   margin-left: 20px;
-  margin-top: 6px;
   margin-bottom: 1px;
+  padding-top: 3px;
 }
 
 // text body
@@ -195,6 +227,7 @@ $content-size: 12px;
 .bit-time-stamp {
   color: $medium-grey;
   font-size: 10px;
+  font-family: 'Poiret One', cursive;
 }
 
 

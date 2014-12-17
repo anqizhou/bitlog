@@ -1,0 +1,31 @@
+<div class = "profile-header">
+  <div class = "profile-image profile-item"><%= image_tag(@user.portrait, height: "80") %></div>
+  <div class = "profile-name profile-item"><%= @user.name %></div>
+</div>
+
+<!-- Post section -->
+<div class = "friendship-status">Follow <%= @user.name %></div>
+<div class = "profile-container">
+  <div class="user-published-posts accordion" id="accordion2">
+    <% @publishedPosts.each do |post| %>
+      <div class="accordion-group">
+        <div class="accordion-heading post-title-published">
+          <div class="post-title" data-post-id="<%= post.id %>"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= post.id %>"><%= post.title %></a></div>
+        </div>
+        <div id="collapse<%= post.id %>" class="accordion-body collapse in">
+          <div class="accordion-inner">
+            <% post.bits.each do |bit| %>
+              <div class="bit-content" data-bit-id="<%= bit.id %>">
+                <%= bit.content %>
+                <% bit.images.each do |image| %>
+                  <div class="bit-images"><%= image_tag(image.file, size: "70") %></div>
+                <% end %>
+                <div class="bit-time-stamp"><%= time_ago_in_words(bit.updated_at) %> ago </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
