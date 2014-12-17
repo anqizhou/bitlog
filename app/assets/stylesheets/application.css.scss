@@ -86,10 +86,24 @@ $content-size: 12px;
 
 .top-bar-inner {
   background-color: $grey;
-  color: white;
   text-align: right;
 }
 
+.top-bar-inner #top-bar-back-btn a {
+  text-align: left;
+  color: white;
+  width: 200px;
+  float: left;
+  padding: 2px 6px 3px;
+  font-size: 14px;
+}
+
+.top-bar-inner #top-bar-save-btn a {
+  text-align: left;
+  color: white;
+  width: 200px;
+  float: right;
+}
 
 .top-bar-inner input {
   background-color: $grey;
@@ -181,4 +195,14 @@ $content-size: 12px;
   color: $medium-grey;
   font-size: 10px;
 }
+
+
+// Sign up and log in pages
+
+.field {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
+}
+
 
