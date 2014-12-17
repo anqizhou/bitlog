@@ -17,8 +17,8 @@
 
       <ul id="lg-menu">
         <% if user_signed_in? %>
-          <li><strong><%= current_user.email %></strong></li>
-          <li><a href="#"><div class="profile-picture"></div></a></li>
+          <li><strong><%= current_user.name %></strong></li>
+          <li><%= image_tag(current_user.portrait, width: "30")%></li>
           <li id="add-button"><%= link_to("+", new_bit_url) %></li>
           <li><%= link_to("View Bitlogs", posts_url) %></li>
           <li><a href="#">Bitlog<br>Feeds</a></li>
