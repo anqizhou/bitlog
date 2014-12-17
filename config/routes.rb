@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+
   devise_for :users
+
   patch 'posts/:id' => 'posts#publish'
 
   resources :posts do

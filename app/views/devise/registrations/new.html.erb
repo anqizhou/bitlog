@@ -23,8 +23,10 @@
   </div>
 
   <div class="field">
-    <%= f.label :profile_picture %><br />
-    <%= f.file_field :portrait %>
+    <%= f.label :portrait %><br />
+    <%= f.file_field(:portrait) %>
+    <!-- Still cannot create profile picture -->
+
   </div>
 
 <% end %>
